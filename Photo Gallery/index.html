@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            margin-bottom: 3vh;
+        }
+        #contain{
+            display: grid;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+        }   
+        #contain>p{
+            text-align: center;
+            font-size: 30px;
+        }
+        #grid{
+            width: 800px;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;   
+            gap: 20px;
+            justify-content: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (max-width: 870px) {
+            #grid{
+                grid-template-columns: 1fr;
+                width: 500px;
+            }
+        }
+        @media screen and (max-width: 560px) {
+            #grid{
+                grid-template-columns: 1fr;
+                width: 300px;
+            }
+        }
+        @media screen and (max-width: 300px) {
+            #grid{
+                grid-template-columns: 1fr;
+                width: 230px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <p>Photo Gallery</p>
+        <div id="grid">
+            <img src="./Images/Africa.jpg" alt="">
+            <img src="./Images/Lake.jpg" alt="">
+            <img src="./Images/Camera.jpg" alt="">
+            <img src="./Images/Waves.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
